@@ -1,0 +1,62 @@
+/* Accordion container */
+.accordion.down-arrow.block {
+  max-width: 900px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Each accordion item */
+.accordion.down-arrow.block > div {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* Title (question) */
+.accordion.down-arrow.block > div > div:first-child {
+  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+}
+
+/* Hover effect */
+.accordion.down-arrow.block > div > div:first-child:hover {
+  background: #f5f5f5;
+}
+
+/* Down arrow */
+.accordion.down-arrow.block > div > div:first-child::after {
+  content: "⌄";
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when open */
+.accordion.down-arrow.block > div.active > div:first-child::after {
+  transform: rotate(180deg);
+}
+
+/* Content (answer) */
+.accordion.down-arrow.block > div > div:last-child {
+  display: none;
+  padding: 0 20px 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Show content when active */
+.accordion.down-arrow.block > div.active > div:last-child {
+  display: block;
+}
+
+.accordion.down-arrow.block > div > div:last-child {
+  display: none;
+}
+
+.accordion.down-arrow.block > div.active > div:last-child {
+  display: block;
+}
