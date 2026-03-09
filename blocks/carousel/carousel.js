@@ -97,6 +97,6 @@ export default function decorate(block) {
   setInterval(() => {
     current = (current + 1) % slides.length;
     update();
-  }, 5000);
+  }, 10000);
 
 }
