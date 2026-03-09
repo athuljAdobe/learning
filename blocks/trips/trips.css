@@ -1,0 +1,90 @@
+/* container */
+
+.trips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 30px;
+
+}
+
+/* card */
+
+.trips > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* image */
+
+.trips picture {
+  display: block;
+  overflow: hidden;
+}
+
+.trips picture img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* title */
+
+.trips > div > div:nth-child(2) {
+  margin-top: 14px;
+}
+
+.trips > div > div:nth-child(2) a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* description */
+
+.trips > div > div:nth-child(3) {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+
+  /* limit text like WKND */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* hover image zoom */
+
+.trips picture img {
+  transition: transform .4s ease;
+}
+
+.trips > div:hover img {
+  transform: scale(1.05);
+}
+
+/* section title */
+
+#where-do-you-want-to-go {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* ALL TRIPS button */
+
+.trips-container .default-content-wrapper:last-child a {
+  display: inline-block;
+  margin-top: 30px;
+  background: #ffd400;
+  padding: 14px 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.trips, #where-do-you-want-to-go, .trips-container .default-content-wrapper:last-child a {
+    margin-left: 65px;
+}
