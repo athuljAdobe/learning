@@ -1,0 +1,18 @@
+{
+  "assets": [
+    "http://localhost:3001/us/en/_jcr_content/root/container/carousel/item_1571954853062.coreimg.jpeg/1660323801921/adobestock-216674449.jpeg",
+    "http://localhost:3001/us/en/_jcr_content/root/container/carousel/item_1572035298405.coreimg.jpeg/1660323822923/beach-walking.jpeg",
+    "http://localhost:3001/us/en/_jcr_content/root/container/carousel/teaser.coreimg.jpeg/1660323784078/adobestock-185234795.jpeg",
+    "http://localhost:3001/us/en/_jcr_content/root/container/container/teaser.coreimg.jpeg/1660323792132/adobestock-156407519.jpeg",
+    "http://localhost:3001/us/en/magazine/guide-la-skateparks/_jcr_content/root/container/container/contentfragment/par2/image_copy.coreimg.png/1660323783259/article-01-picture-01.png",
+    "http://localhost:3001/us/en/magazine/ski-touring/_jcr_content/root/container/container/contentfragment/par1/image.coreimg.jpeg/1660323789866/skitouring5sjoeberg.jpeg",
+    "http://localhost:3001/us/en/magazine/arctic-surfing/_jcr_content/root/container/container/contentfragment/par1/image.coreimg.jpeg/1660323789770/surfer-wave-02.jpeg",
+    "http://localhost:3001/us/en/magazine/san-diego-surf/_jcr_content/root/container/container/contentfragment/par1/image.coreimg.jpeg/1660323790169/adobestock-164735399.jpeg",
+    "http://localhost:3001/us/en/_jcr_content/root/container/teaser.coreimg.jpeg/1660323789729/adobestock-140634652.jpeg",
+    "http://localhost:3001/us/en/adventures/yosemite-backpacking/_jcr_content/root/container/carousel/image.coreimg.jpeg/1660323790695/adobestock-231698835.jpeg",
+    "http://localhost:3001/us/en/adventures/whistler-mountain-biking/_jcr_content/root/container/carousel/image.coreimg.jpeg/1660323789625/adobestock-122615840.jpeg",
+    "http://localhost:3001/us/en/adventures/west-coast-cycling/_jcr_content/root/container/carousel/image.coreimg.jpeg/1660323786740/adobestock-151584995.jpeg",
+    "http://localhost:3001/us/en/adventures/tahoe-skiing/_jcr_content/root/container/carousel/image.coreimg.jpeg/1660323785476/adobestock-184591344.jpeg"
+  ],
+  "siteOrigin": "https://wknd.site"
+}
