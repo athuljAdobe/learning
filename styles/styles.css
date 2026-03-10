@@ -486,6 +486,7 @@ html, body {
   top: 25px;
 }
 #faqs{
+  margin-top:50px;
   position: relative;
   top: 35px;
 }
