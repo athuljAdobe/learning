@@ -37,3 +37,21 @@
   font-size: 14px;
   text-transform: uppercase;
 }
+
+.signin-container {
+  background: #1e1e1e;
+  color: white;
+}
+
+.signin-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 60px;
+}
+
+.signin-wrapper p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}

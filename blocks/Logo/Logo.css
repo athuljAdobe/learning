@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.logo img {
+  /* height: 70px; */
+  width: auto;
+  position: relative;
+  top: 0px;
+  left: 20px;
+
+}

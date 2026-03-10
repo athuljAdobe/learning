@@ -170,6 +170,18 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
+window.addEventListener("scroll", () => {
+
+  const header = document.querySelector(".nav-sections");
+
+  if (window.scrollY > 50) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+
+});
+
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
