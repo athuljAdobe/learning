@@ -1,0 +1,39 @@
+/* make nav take full width */
+#nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0;
+  padding-bottom: 29px;
+}
+
+/* allow signin container to grow */
+.signin-container {
+  flex: 1;
+  width: 100%;
+}
+
+/* black bar */
+.signin.black-bar {
+  width: 100%;
+  background-color: #131313;
+}
+
+/* inner layout */
+.signin.black-bar > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;   /* gap from right */
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* text style */
+.signin.black-bar p {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
