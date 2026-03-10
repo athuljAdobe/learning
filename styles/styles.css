@@ -492,4 +492,16 @@ html, body {
   margin-top:50px;
   position: relative;
   top: 35px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+#faqs::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background: #ffd500;
 }
