@@ -471,4 +471,6 @@ html, body {
   gap: 8px;
   background: #eee;
   padding: 8px 14px;
+  position: relative;
+  top: 40px;
 }
