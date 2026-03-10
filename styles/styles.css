@@ -494,6 +494,12 @@ html, body {
   top: 35px;
   display: inline-block;
   padding-bottom: 10px;
+  font-family: 'Adobe Clean', Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 #faqs::after {
