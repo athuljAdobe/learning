@@ -1,11 +1,9 @@
 export default function decorate(block) {
-
   const rows = [...block.children];
   const grid = document.createElement('div');
   grid.className = 'articles-grid';
 
   rows.forEach((row) => {
-
     const image = row.children[0];
     const title = row.children[1];
     const desc = row.children[2];
@@ -22,5 +20,4 @@ export default function decorate(block) {
 
   block.innerHTML = '';
   block.append(grid);
-
 }

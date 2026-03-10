@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   const rows = [...block.children];
   let current = 0;
 
@@ -7,7 +6,6 @@ export default function decorate(block) {
   track.className = 'carousel-track';
 
   rows.forEach((row) => {
-
     const slide = document.createElement('div');
     slide.className = 'carousel-slide';
 
@@ -52,8 +50,22 @@ export default function decorate(block) {
   const dotsContainer = document.createElement('div');
   dotsContainer.className = 'carousel-dots';
 
-  slides.forEach((_, i) => {
+  block.append(dotsContainer);
 
+  /* update function must be defined before usage */
+
+  function update() {
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    const dots = dotsContainer.querySelectorAll('.dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  /* create dots */
+
+  slides.forEach((_, i) => {
     const dot = document.createElement('span');
     dot.className = 'dot';
 
@@ -65,22 +77,9 @@ export default function decorate(block) {
     });
 
     dotsContainer.append(dot);
-
   });
 
-  block.append(dotsContainer);
-
-  const dots = dotsContainer.querySelectorAll('.dot');
-
-  function update() {
-
-    track.style.transform = `translateX(-${current * 100}%)`;
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === current);
-    });
-
-  }
+  /* arrows */
 
   prev.addEventListener('click', () => {
     current = (current - 1 + slides.length) % slides.length;
@@ -98,5 +97,4 @@ export default function decorate(block) {
     current = (current + 1) % slides.length;
     update();
   }, 10000);
-
 }

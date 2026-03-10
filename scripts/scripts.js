@@ -170,16 +170,14 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
-window.addEventListener("scroll", () => {
-
-  const header = document.querySelector(".nav-sections");
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.nav-sections');
 
   if (window.scrollY > 50) {
-    header.classList.add("sticky");
+    header.classList.add('sticky');
   } else {
-    header.classList.remove("sticky");
+    header.classList.remove('sticky');
   }
-
 });
 
 /**

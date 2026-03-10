@@ -18,9 +18,4 @@
 .navigation a:hover {
   color: #ff6b00;
 }
-.navigation {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
+ 

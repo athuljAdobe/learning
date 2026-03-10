@@ -22,16 +22,11 @@
 .adventure-content {
   position: absolute;
   bottom: 0;
-
   left: 80px;
   right: 80px;
-
   height: 50%;
-
   background: #f5f5f5;
-
   padding: 40px 60px;
-
   box-sizing: border-box;
 }
 

@@ -12,6 +12,8 @@
 .signin-container {
   flex: 1;
   width: 100%;
+  background: #1e1e1e;
+  color: white;
 }
 
 /* black bar */
@@ -31,6 +33,13 @@
 }
 
 /* text style */
+.signin-wrapper p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .signin.black-bar p {
   margin: 0;
   color: white;
@@ -38,20 +47,8 @@
   text-transform: uppercase;
 }
 
-.signin-container {
-  background: #1e1e1e;
-  color: white;
-}
-
 .signin-wrapper {
   display: flex;
   justify-content: flex-end;
   padding: 8px 60px;
-}
-
-.signin-wrapper p {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
 }

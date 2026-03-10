@@ -1,9 +1,7 @@
 export default function decorate(block) {
-
   const items = block.querySelectorAll(':scope > div');
 
   items.forEach((item) => {
-
     const title = item.children[0];
     const content = item.children[1];
 
@@ -15,7 +13,6 @@ export default function decorate(block) {
     content.style.display = 'none';
 
     title.addEventListener('click', () => {
-
       const isOpen = item.classList.contains('active');
 
       // close all items
@@ -29,9 +26,6 @@ export default function decorate(block) {
         item.classList.add('active');
         content.style.display = 'block';
       }
-
     });
-
   });
-
 }

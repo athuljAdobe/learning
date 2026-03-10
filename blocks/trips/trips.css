@@ -26,6 +26,7 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
+   transition: transform .4s ease;
 }
 
 /* title */
@@ -59,9 +60,6 @@
 
 /* hover image zoom */
 
-.trips picture img {
-  transition: transform .4s ease;
-}
 
 .trips > div:hover img {
   transform: scale(1.05);
@@ -85,6 +83,7 @@
   text-decoration: none;
   color: black;
 }
+
 .trips, #where-do-you-want-to-go, .trips-container .default-content-wrapper:last-child a {
     margin-left: 65px;
 }

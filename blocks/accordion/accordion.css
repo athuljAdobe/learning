@@ -20,26 +20,6 @@
   background: #fff;
 }
 
-/* Hover effect */
-.accordion.down-arrow.block > div > div:first-child:hover {
-  background: #f5f5f5;
-}
-
-/* Down arrow */
-.accordion.down-arrow.block > div > div:first-child::after {
-  content: "⌄";
-  position: absolute;
-  right: 20px;
-  top: 18px;
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-/* Rotate arrow when open */
-.accordion.down-arrow.block > div.active > div:first-child::after {
-  transform: rotate(180deg);
-}
-
 /* Content (answer) */
 .accordion.down-arrow.block > div > div:last-child {
   display: none;
@@ -48,15 +28,12 @@
   line-height: 1.6;
 }
 
+/* Hover effect */
+.accordion.down-arrow.block > div > div:first-child:hover {
+  background: #f5f5f5;
+}
+
 /* Show content when active */
-.accordion.down-arrow.block > div.active > div:last-child {
-  display: block;
-}
-
-.accordion.down-arrow.block > div > div:last-child {
-  display: none;
-}
-
 .accordion.down-arrow.block > div.active > div:last-child {
   display: block;
 }

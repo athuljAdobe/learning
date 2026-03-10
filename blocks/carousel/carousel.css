@@ -29,7 +29,9 @@
 }
 
 /* -------------------- */
+
 /* WHITE DESCRIPTION BOX */
+
 /* -------------------- */
 
 .carousel-slide > div:nth-child(2),
@@ -40,12 +42,9 @@
   right: 50px;
   bottom: 60px;
   margin-right: 50px;
-  
-
   background: white;
   padding: 40px 50px;
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -72,17 +71,17 @@
 .carousel-slide a {
   display: inline-block;
   width: fit-content;
-
   background: #ffd400;
   padding: 14px 28px;
-
   font-weight: bold;
   text-decoration: none;
   color: black;
 }
 
 /* -------------------- */
+
 /* ARROWS */
+
 /* -------------------- */
 
 .carousel-prev,
@@ -90,7 +89,6 @@
   position: absolute;
   bottom: 40px;
   right: 60px;
-
   font-size: 24px;
   border: none;
   background: white;
@@ -103,7 +101,9 @@
 }
 
 /* -------------------- */
+
 /* DOTS */
+
 /* -------------------- */
 
 .carousel-dots {
@@ -127,11 +127,12 @@
 }
 
 /* -------------------- */
+
 /* RESPONSIVE */
+
 /* -------------------- */
 
-@media (max-width: 900px) {
-
+@media (width <= 900px) {
   .carousel-slide picture img {
     height: 380px;
   }

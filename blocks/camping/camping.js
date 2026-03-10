@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   const row = block.querySelector(':scope > div');
 
   const image = row.children[0];
