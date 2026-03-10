@@ -72,6 +72,7 @@
 
 body {
   display: none;
+
   /* margin: 0; */
   background-color: var(--background-color);
   color: var(--text-color);
@@ -362,6 +363,7 @@ main .section.highlight {
 
 
 /* header section layout */
+
 .nav-sections {
   display: flex;
   align-items: center;
@@ -485,6 +487,7 @@ html, body {
   position: relative;
   top: 25px;
 }
+
 #faqs{
   margin-top:50px;
   position: relative;
