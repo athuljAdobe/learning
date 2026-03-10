@@ -25,6 +25,7 @@
   content: "+";
   position: absolute;
   right: 20px;
+  bottom: 10px;
   font-size: 20px;
   font-weight: bold;
   transition: transform 0.2s ease;
