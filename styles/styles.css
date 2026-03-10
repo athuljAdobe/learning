@@ -511,3 +511,33 @@ html, body {
   height: 3px;
   background: #ffd500;
 }
+
+.card-faq-container.need-help-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* left content */
+.card-faq-wrapper {
+  flex: 2;
+}
+
+/* right help box */
+.need-help-wrapper {
+  flex: 1;
+  max-width: 320px;
+  padding-top: 120px;
+}
+
+
+@media (max-width: 900px) {
+  .card-faq-container.need-help-container {
+    flex-direction: column;
+  }
+
+  .need-help-wrapper {
+    max-width: 100%;
+  }
+}
