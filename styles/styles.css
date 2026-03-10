@@ -355,4 +355,6 @@ main .section.highlight {
   transform: scale(0.95);
 }
 
-.header-wrapper{ display: flex; justify-content: flex-end; color: white; background-color: #131313; margin-bottom: 30px; } nav{ color: white; background-color: #131313; height: 25px; font-size: 20px; margin-bottom: 50px; }
+.header-wrapper{
+  height: 25px;
+}
