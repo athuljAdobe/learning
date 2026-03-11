@@ -3,10 +3,13 @@ export default function decorate(block) {
   const rows = [...block.children];
 
   rows.forEach((row) => {
-    const text = row.textContent.trim().split('\n');
 
-    const title = text[0];
-    const date = text[1];
+    const p = row.querySelector('p');
+
+    const parts = p.innerHTML.split('<br>');
+
+    const title = parts[0].trim();
+    const date = parts[1].trim();
 
     row.innerHTML = `
       <div class="story-card">
@@ -14,6 +17,7 @@ export default function decorate(block) {
         <span class="story-date">${date}</span>
       </div>
     `;
+
   });
 
 }
