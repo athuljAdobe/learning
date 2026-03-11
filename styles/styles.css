@@ -506,7 +506,7 @@ html, body {
   top: 25px;
 }
 
-#faqs{
+#faqs,#our-contributors {
   margin-top:50px;
   position: relative;
   top: 35px;
@@ -583,10 +583,10 @@ html, body {
 }
 
 #recent-articles::after,
-#next-adventures::after {
+#next-adventures::after,#our-contributors::after {
   content: "";
   display: block;
-  width: 60px;        /* length of underline */
+  width: 150px;        /* length of underline */
   height: 3px;        /* thickness */
   background-color: #f2c200; /* yellow color */
   margin-top: 8px;
