@@ -3,6 +3,7 @@ footer {
   background: var(--text-color);
   color: var(--light-color);
   font-family: var(--body-font-family);
+  margin: 0px 10px;
 }
  
 /* Container */
