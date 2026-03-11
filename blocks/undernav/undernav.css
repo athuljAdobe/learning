@@ -1,0 +1,60 @@
+.undernav {
+  background: #111;
+  color: white;
+  padding: 40px 80px;
+}
+
+/* layout */
+
+.undernav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo */
+
+.undernav-logo {
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+/* nav links */
+
+.undernav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.undernav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* follow section */
+
+.undernav-social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.undernav-social span {
+  font-weight: 600;
+}
+
+/* icons box */
+
+.social-icons {
+  background: #eee;
+  padding: 12px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: black;
+  text-decoration: none;
+}

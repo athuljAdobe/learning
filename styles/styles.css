@@ -604,3 +604,7 @@ main .section {
   position: relative;
   bottom: 1700px;
 }
+
+.footer{
+  background-color: black
+}
