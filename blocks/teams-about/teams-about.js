@@ -1,13 +1,11 @@
 export default function decorate(block) {
-
   const rows = [...block.children];
   const columns = rows[0].children.length;
 
   const container = document.createElement('div');
   container.className = 'teams-container';
 
-  for (let i = 0; i < columns; i++) {
-
+  for (let i = 0; i < columns; i += 1) {
     const card = document.createElement('div');
     card.className = 'team-card';
 

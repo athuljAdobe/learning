@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   const imageRow = block.children[0];
   const textRow = block.children[1];
 
@@ -9,7 +8,7 @@ export default function decorate(block) {
   const title = textRow.children[1].textContent.trim();
 
   const wrapper = document.createElement('div');
-  wrapper.className = "hero-magazine-wrapper";
+  wrapper.className = 'hero-magazine-wrapper';
 
   wrapper.innerHTML = `
     <div class="hero-magazine-image">
@@ -23,6 +22,6 @@ export default function decorate(block) {
     </div>
   `;
 
-  block.innerHTML = "";
+  block.innerHTML = '';
   block.append(wrapper);
 }
