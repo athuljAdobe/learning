@@ -5,6 +5,7 @@
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 29px;
+  padding: 0;
 }
 
 /* allow signin container to grow */
@@ -37,6 +38,7 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  padding: 0;
 }
 
 .signin.black-bar p {
