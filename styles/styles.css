@@ -561,7 +561,7 @@ html, body {
 }
 
 #recent-articles::after,
-#next-adventures::after,#our-contributors::after,#wknd-guides::after {
+#next-adventures::after,#our-contributors::after,#wknd-guides::after,#current-adventures::after {
   content: "";
   display: block;
   width: 150px;        /* length of underline */
