@@ -442,11 +442,29 @@ html, body {
 
 /* MAIN NAV ROW */
 
-.logo-container.navigation-container.search-container.nav-sections {
+.nav-sections {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 40px;
+  background: #f3f3f3;
+  width: 100%;
+}
+
+.logo-container {
+  flex: 1;
+  height: 30px;
+  z-index: 2;
+}
+
+.navigation-container {
+  flex: 2;
+}
+
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* LOGO */
