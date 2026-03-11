@@ -549,6 +549,7 @@ html, body {
   height: 50px;
   padding: 0 40px;
   box-sizing: border-box;
+  background-color: #ffff;
 }
 
 #recent-articles,
@@ -572,4 +573,8 @@ html, body {
 
 #about-us {
   margin-top: 80px;
+}
+
+main .section {
+  padding: 60px 0;
 }
