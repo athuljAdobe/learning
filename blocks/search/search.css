@@ -6,19 +6,41 @@
   right: 34px;
 }
 
+/* form */
+
+.search-form {
+  display: flex;
+}
+
+/* wrapper */
+
 .search-input {
   display: flex;
   align-items: center;
   background: #f1f1f1;
   padding: 6px 12px;
   width: 180px;
+  gap: 8px;
+}
+
+/* icon */
+
+.search-icon {
   font-size: 14px;
   color: #777;
 }
 
-.search-icon {
-  margin-right: 8px;
+/* input */
+
+.search-control {
+  border: none;
+  background: transparent;
+  outline: none;
   font-size: 14px;
+  width: 100%;
+  color: #333;
 }
 
-
+.search-control::placeholder {
+  color: #777;
+}
