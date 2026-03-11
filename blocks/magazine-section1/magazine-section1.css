@@ -1,38 +1,40 @@
-.hero-magazine-wrapper {
+.magazine-section1 {
   max-width: 1200px;
-  margin-top: 150px;
+  margin: 120px auto 40px auto;
 }
 
 /* Image */
-.hero-magazine-image img {
+.magazine-section1 picture img {
   width: 100%;
   display: block;
 }
 
-/* Bottom label */
-.hero-magazine-label {
-  margin-top: 14px;
+/* Label container */
+.magazine-section1 .magazine-label {
+  margin-top: 16px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 13px;
   letter-spacing: 1px;
 }
 
-/* Magazine text */
-.hero-category {
+/* Magazine link */
+.magazine-section1 .magazine-category a {
+  text-decoration: none;
+  color: #000;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-/* Arctic surfing */
-.hero-title {
+/* Title */
+.magazine-section1 .magazine-title {
   text-transform: uppercase;
-  color: #1a1a1a;
+  color: #333;
 }
 
 /* Yellow triangle */
-.hero-triangle {
+.magazine-section1 .magazine-triangle {
   width: 0;
   height: 0;
   border-left: 8px solid #f4b400;

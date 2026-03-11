@@ -578,3 +578,7 @@ html, body {
 main .section {
   padding: 60px 0;
 }
+
+.hero-container {
+  margin-bottom: 120px;
+}
