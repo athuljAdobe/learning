@@ -21,6 +21,10 @@
 .signin.black-bar {
   width: 100%;
   background-color: #131313;
+  color: #fff;
+  text-align: right;
+  padding: 14px 20px;
+  font-size: 14px;
 }
 
 /* inner layout */

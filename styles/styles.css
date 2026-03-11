@@ -420,13 +420,6 @@ html, body {
 
 /* SIGN IN BAR */
 
-.signin.black-bar {
-  background: #111;
-  color: #fff;
-  text-align: right;
-  padding: 8px 20px;
-  font-size: 14px;
-}
 
 .logo-container {
   flex: 1;
