@@ -573,3 +573,21 @@ html, body {
   padding: 0 40px;
   box-sizing: border-box;
 }
+
+#recent-articles,
+#next-adventures {
+  position: relative;
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+#recent-articles::after,
+#next-adventures::after {
+  content: "";
+  display: block;
+  width: 60px;        /* length of underline */
+  height: 3px;        /* thickness */
+  background-color: #f2c200; /* yellow color */
+  margin-top: 8px;
+}
