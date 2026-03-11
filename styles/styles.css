@@ -591,3 +591,7 @@ html, body {
   background-color: #f2c200; /* yellow color */
   margin-top: 8px;
 }
+
+.section-heading {
+  margin-top: 80px;
+}
