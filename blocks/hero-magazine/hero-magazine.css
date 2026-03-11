@@ -1,0 +1,41 @@
+.hero-magazine-wrapper {
+  max-width: 1200px;
+  margin-top: 150px;
+}
+
+/* Image */
+.hero-magazine-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Bottom label */
+.hero-magazine-label {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* Magazine text */
+.hero-category {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Arctic surfing */
+.hero-title {
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+/* Yellow triangle */
+.hero-triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid #f4b400;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
