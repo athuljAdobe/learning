@@ -1,0 +1,66 @@
+.arctic-content1 {
+  max-width: 760px;
+  margin: 140px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Title */
+.arctic-content1 strong:first-child {
+  font-size: 44px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Author */
+.arctic-content1 h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+/* Paragraph spacing */
+.arctic-content1 p {
+  margin: 20px 0;
+}
+
+/* Quote */
+.arctic-content1 p:nth-of-type(2) {
+  font-style: italic;
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Images */
+.arctic-content1 img {
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+  display: block;
+}
+
+/* Section headings */
+.arctic-content1 h2 {
+  margin-top: 60px;
+  font-size: 28px;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Yellow underline */
+.arctic-content1 h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #f4b400;
+  margin-top: 8px;
+}
+
+/* Image inside section */
+.arctic-content1 h2 + p picture img {
+  margin-top: 20px;
+}
