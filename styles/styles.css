@@ -530,25 +530,7 @@ html, body {
   background: #ffd500;
 }
 
-#recent-articles::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 80px;
-  height: 3px;
-  background: #ffd500;
-}
 
-#where-do-you-want-to-go::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 80px;
-  height: 3px;
-  background: #ffd500;
-}
 
 .card-faq-container.need-help-container {
   display: flex;
