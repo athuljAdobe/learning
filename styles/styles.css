@@ -364,15 +364,6 @@ main .section.highlight {
 
 /* header section layout */
 
-.nav-sections {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 60px;
-  background: #f3f3f3;
-  width: 100%;
-}
-
 .nav-sections.sticky {
   position: fixed;
   top: 0;
@@ -418,10 +409,7 @@ html, body {
   overflow-x: hidden;
 }
 
-.logo-container {
-  height: 30px;
-  z-index: 2;
-}
+
 
 /* NAV BAR STRUCTURE */
 
@@ -440,21 +428,10 @@ html, body {
   font-size: 14px;
 }
 
-/* MAIN NAV ROW */
-
-.nav-sections {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: #f3f3f3;
-  width: 100%;
-}
-
 .logo-container {
   flex: 1;
   height: 30px;
-  z-index: 2;
+   z-index: 2;
 }
 
 .navigation-container {
@@ -554,7 +531,7 @@ html, body {
 }
 
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .card-faq-container.need-help-container {
     flex-direction: column;
   }
