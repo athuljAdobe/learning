@@ -4,6 +4,7 @@
   gap: 40px;
   position: relative;
   bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .navigation a {
