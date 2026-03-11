@@ -590,6 +590,7 @@ html, body {
   height: 3px;        /* thickness */
   background-color: #f2c200; /* yellow color */
   margin-top: 8px;
+  margin-bottom: 10px;
 }
 
 #about-us {

@@ -1,0 +1,51 @@
+.teams-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Image */
+.team-image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Name */
+.team-card h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Profession */
+.team-role {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+  margin-top: 6px;
+}
+
+/* Social bar */
+.team-social {
+  margin-top: 20px;
+  background: #222;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Icons */
+.team-social a {
+  color: white;
+  font-size: 16px;
+}
+
+.team-social a:hover {
+  color: #f4b400;
+}
