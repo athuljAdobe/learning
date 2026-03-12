@@ -1,3 +1,6 @@
+import { decorateIcons } from '../../scripts/aem.js';
+import { decorateBlocks, loadBlocks } from '../../scripts/aem.js';
+
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
@@ -123,6 +126,8 @@ export default async function decorate(block) {
   const nav = document.createElement('nav');
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
+  decorateBlocks(nav);
+await loadBlocks(nav);
 
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
