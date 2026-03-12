@@ -1,18 +1,25 @@
 export default function decorate(block) {
 
-  const slides = [...block.children];
+  const rows = [...block.children];
 
   const track = document.createElement('div');
   track.className = 'balicarousel-track';
 
-  slides.forEach((slide) => {
-    const s = document.createElement('div');
-    s.className = 'balicarousel-slide';
-    s.appendChild(slide);
-    track.appendChild(s);
+  rows.forEach((row) => {
+
+    const slide = document.createElement('div');
+    slide.className = 'balicarousel-slide';
+
+    const image = row.querySelector('picture');
+
+    if (image) {
+      slide.append(image);
+    }
+
+    track.append(slide);
   });
 
-  block.innerHTML = '';
+  block.textContent = '';
   block.append(track);
 
   let index = 0;
@@ -21,11 +28,11 @@ export default function decorate(block) {
 
   const prev = document.createElement('button');
   prev.className = 'balicarousel-prev';
-  prev.textContent = '←';
+  prev.innerHTML = '←';
 
   const next = document.createElement('button');
   next.className = 'balicarousel-next';
-  next.textContent = '→';
+  next.innerHTML = '→';
 
   block.append(prev, next);
 
@@ -34,9 +41,13 @@ export default function decorate(block) {
   const dotsContainer = document.createElement('div');
   dotsContainer.className = 'balicarousel-dots';
 
-  const dots = slides.map((_, i) => {
+  const dots = [];
+
+  rows.forEach((_, i) => {
+
     const dot = document.createElement('span');
     dot.className = 'balicarousel-dot';
+
     if (i === 0) dot.classList.add('active');
 
     dot.addEventListener('click', () => {
@@ -44,8 +55,8 @@ export default function decorate(block) {
       update();
     });
 
+    dots.push(dot);
     dotsContainer.append(dot);
-    return dot;
   });
 
   block.append(dotsContainer);
@@ -54,18 +65,17 @@ export default function decorate(block) {
 
     track.style.transform = `translateX(-${index * 100}%)`;
 
-    dots.forEach((dot) => dot.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
     dots[index].classList.add('active');
-
   }
 
   next.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
+    index = (index + 1) % rows.length;
     update();
   });
 
   prev.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
+    index = (index - 1 + rows.length) % rows.length;
     update();
   });
 

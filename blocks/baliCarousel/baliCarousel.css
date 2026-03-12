@@ -3,11 +3,9 @@
 .balicarousel {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  margin-top: 150px;
 }
 
-/* track */
+/* slide track */
 
 .balicarousel-track {
   display: flex;
@@ -26,33 +24,41 @@
   width: 100%;
   height: 520px;
   object-fit: cover;
-  display: block;
 }
 
-/* arrows */
+/* =========================
+   ARROWS (BOTTOM RIGHT)
+========================= */
 
 .balicarousel-prev,
 .balicarousel-next {
   position: absolute;
-  bottom: 30px;
-  right: 60px;
+  bottom: 25px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
   background: white;
   border: none;
   font-size: 20px;
-  padding: 10px 14px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* spacing between arrows */
 
 .balicarousel-prev {
-  right: 110px;
+  right: 85px;
 }
 
-/* dots */
+/* =========================
+   DOTS
+========================= */
 
 .balicarousel-dots {
   position: absolute;
-  bottom: 35px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -63,19 +69,9 @@
   background: #bbb;
   border-radius: 50%;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 6px;
 }
 
 .balicarousel-dot.active {
   background: #333;
-}
-
-/* responsive */
-
-@media (max-width: 900px) {
-
-  .balicarousel-slide img {
-    height: 380px;
-  }
-
 }
