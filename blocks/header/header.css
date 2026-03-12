@@ -229,3 +229,61 @@ header nav .nav-hamburger {
 body {
   padding-top: 90px;
 }
+
+/* ================================================
+   SIGNIN MODAL
+   ================================================ */
+
+.signin-modal {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 60%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.signin-modal.active {
+  display: flex;
+}
+
+.signin-modal-content {
+  background: #1a1a1a;
+  color: white;
+  width: 420px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 40%);
+}
+
+.signin-modal-content h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.signin-modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: transparent;
+  border: 1px solid #777;
+  color: white;
+}
+
+.signin-submit {
+  background: #ffea00;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signin-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}

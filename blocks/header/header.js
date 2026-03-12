@@ -212,5 +212,47 @@ export default async function decorate(block) {
   navWrapper.append(nav);
 
   block.append(navWrapper);
+  /* ====================================
+   SIGNIN MODAL
+==================================== */
+
+const signBtn = nav.querySelector('.signin-btn');
+
+if (signBtn) {
+
+  const modal = document.createElement('div');
+  modal.className = 'signin-modal';
+
+  modal.innerHTML = `
+    <div class="signin-modal-content">
+      <span class="signin-close">&times;</span>
+      <h2>Sign In</h2>
+      <p>Welcome Back</p>
+      <input type="text" placeholder="USERNAME">
+      <input type="password" placeholder="PASSWORD">
+      <p>FORGOT YOUR PASSWORD?</p>
+      <button class="signin-submit">SIGN IN</button>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const closeBtn = modal.querySelector('.signin-close');
+
+  signBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+}
+
   decorateIcons(block);
 }
