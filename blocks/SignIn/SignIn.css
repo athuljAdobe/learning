@@ -1,0 +1,187 @@
+/* override header restriction */
+header .signin-container.nav-brand {
+  flex-basis: auto !important;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* wrapper should take full width */
+.signin-wrapper {
+  width: 100%;
+}
+
+/* black top bar */
+.signin.black-bar {
+  background: #111;
+  width: 100vw;
+
+  /* break out of centered container */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* inner row */
+.signin.black-bar > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+
+  padding: 8px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* text styles */
+.signin.black-bar p {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* dropdown menu */
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: rgb(218, 211, 211);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 120px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.lang-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.lang-menu li:hover {
+  background: #eee;
+}
+
+/* language button style (remove default button look) */
+.signin.black-bar .lang-btn {
+  background: transparent;
+  border: none;
+  color: rgb(252, 249, 249);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* remove button outline */
+.signin.black-bar .lang-btn:focus {
+  outline: none;
+}
+
+/* arrow */
+.signin.black-bar .lang-btn::after {
+  content: "▼";
+  font-size: 10px;
+}
+
+/* modal background */
+.signin-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* modal box */
+.signin-modal-content {
+  background: #1a1a1a;
+  color: white;
+  width: 420px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+/* heading */
+.signin-modal-content h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+/* input fields */
+.signin-modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: transparent;
+  border: 1px solid #777;
+  color: white;
+}
+
+/* sign in button */
+.signin-submit {
+  background: #ffea00;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* close button */
+.signin-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+header nav {
+  z-index: 1;
+}
+
+.signin-container {
+  position: relative;
+  z-index: 100;
+}
+
+/* SIGN IN button style */
+.signin.black-bar .signin-btn {
+  background: transparent;   /* keep same as black bar */
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* remove browser outline */
+.signin.black-bar .signin-btn:focus {
+  outline: none;
+}
+
+/* hover effect */
+.signin.black-bar .signin-btn:hover {
+  opacity: 0.8;
+}
