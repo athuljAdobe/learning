@@ -1,100 +1,72 @@
 export default function decorate(block) {
-  const rows = [...block.children];
-  let current = 0;
+
+  const slides = [...block.children];
 
   const track = document.createElement('div');
-  track.className = 'carousel-track';
+  track.className = 'balicarousel-track';
 
-  rows.forEach((row) => {
-    const slide = document.createElement('div');
-    slide.className = 'carousel-slide';
-
-    const image = row.children[0];
-    const title = row.children[1];
-    const description = row.children[2];
-    const link = row.children[3];
-
-    const content = document.createElement('div');
-    content.className = 'carousel-content';
-
-    content.append(title);
-    content.append(description);
-    content.append(link);
-
-    slide.append(image);
-    slide.append(content);
-
-    track.append(slide);
+  slides.forEach((slide) => {
+    const s = document.createElement('div');
+    s.className = 'balicarousel-slide';
+    s.appendChild(slide);
+    track.appendChild(s);
   });
 
-  block.textContent = '';
+  block.innerHTML = '';
   block.append(track);
 
-  const slides = [...track.children];
+  let index = 0;
 
   /* arrows */
 
   const prev = document.createElement('button');
-  prev.className = 'carousel-prev';
-  prev.innerHTML = '←';
+  prev.className = 'balicarousel-prev';
+  prev.textContent = '←';
 
   const next = document.createElement('button');
-  next.className = 'carousel-next';
-  next.innerHTML = '→';
+  next.className = 'balicarousel-next';
+  next.textContent = '→';
 
-  block.append(prev);
-  block.append(next);
+  block.append(prev, next);
 
   /* dots */
 
   const dotsContainer = document.createElement('div');
-  dotsContainer.className = 'carousel-dots';
+  dotsContainer.className = 'balicarousel-dots';
 
-  block.append(dotsContainer);
-
-  /* update function must be defined before usage */
-
-  function update() {
-    track.style.transform = `translateX(-${current * 100}%)`;
-
-    const dots = dotsContainer.querySelectorAll('.dot');
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === current);
-    });
-  }
-
-  /* create dots */
-
-  slides.forEach((_, i) => {
+  const dots = slides.map((_, i) => {
     const dot = document.createElement('span');
-    dot.className = 'dot';
-
+    dot.className = 'balicarousel-dot';
     if (i === 0) dot.classList.add('active');
 
     dot.addEventListener('click', () => {
-      current = i;
+      index = i;
       update();
     });
 
     dotsContainer.append(dot);
+    return dot;
   });
 
-  /* arrows */
+  block.append(dotsContainer);
 
-  prev.addEventListener('click', () => {
-    current = (current - 1 + slides.length) % slides.length;
-    update();
-  });
+  function update() {
+
+    track.style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach((dot) => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+
+  }
 
   next.addEventListener('click', () => {
-    current = (current + 1) % slides.length;
+    index = (index + 1) % slides.length;
     update();
   });
 
-  /* auto slide */
-
-  setInterval(() => {
-    current = (current + 1) % slides.length;
+  prev.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
     update();
-  }, 10000);
+  });
+
 }
