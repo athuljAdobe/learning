@@ -124,7 +124,7 @@ header nav .nav-brand .navigation-bar1.block > div > div:nth-child(2) a {
 
 header nav .nav-brand .navigation-bar1.block > div > div:nth-child(2) a:hover {
   background: #ffd100;   /* WKND yellow */
-  color: white;
+  color: rgb(23, 22, 22);
 }
 
 header nav .nav-brand .navigation-bar1.block > div > div:nth-child(2) p {
