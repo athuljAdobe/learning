@@ -12,14 +12,13 @@ export default function decorate(block) {
 
     const image = row.querySelector('picture');
 
-    if (image) {
-      slide.append(image);
-    }
+    if (image) slide.append(image);
 
     track.append(slide);
+
   });
 
-  block.textContent = '';
+  block.innerHTML = '';
   block.append(track);
 
   let index = 0;
@@ -41,9 +40,7 @@ export default function decorate(block) {
   const dotsContainer = document.createElement('div');
   dotsContainer.className = 'balicarousel-dots';
 
-  const dots = [];
-
-  rows.forEach((_, i) => {
+  const dots = rows.map((_, i) => {
 
     const dot = document.createElement('span');
     dot.className = 'balicarousel-dot';
@@ -55,8 +52,10 @@ export default function decorate(block) {
       update();
     });
 
-    dots.push(dot);
     dotsContainer.append(dot);
+
+    return dot;
+
   });
 
   block.append(dotsContainer);
@@ -67,6 +66,7 @@ export default function decorate(block) {
 
     dots.forEach(d => d.classList.remove('active'));
     dots[index].classList.add('active');
+
   }
 
   next.addEventListener('click', () => {

@@ -1,11 +1,13 @@
-/* carousel container */
+/* wrapper */
 
 .balicarousel {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  margin-top: 100px;
 }
 
-/* slide track */
+/* track */
 
 .balicarousel-track {
   display: flex;
@@ -24,21 +26,21 @@
   width: 100%;
   height: 520px;
   object-fit: cover;
+  display: block;
 }
 
 /* =========================
-   ARROWS (BOTTOM RIGHT)
+   ARROWS
 ========================= */
 
 .balicarousel-prev,
 .balicarousel-next {
   position: absolute;
   bottom: 25px;
-  right: 25px;
-  width: 48px;
-  height: 48px;
   background: white;
   border: none;
+  width: 48px;
+  height: 48px;
   font-size: 20px;
   cursor: pointer;
   display: flex;
@@ -46,7 +48,11 @@
   justify-content: center;
 }
 
-/* spacing between arrows */
+/* right bottom placement */
+
+.balicarousel-next {
+  right: 25px;
+}
 
 .balicarousel-prev {
   right: 85px;
@@ -74,4 +80,12 @@
 
 .balicarousel-dot.active {
   background: #333;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+  .balicarousel-slide img {
+    height: 380px;
+  }
 }
