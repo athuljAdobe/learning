@@ -104,12 +104,11 @@ export default async function decorate(block) {
 
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
-  classes.forEach((c, i) => {
-    const section = nav.children[i];
-    if (section) section.classList.add(`nav-${c}`);
-  });
-
+ const classes = ['brand', 'sections', 'tools', 'signin'];
+classes.forEach((c, i) => {
+  const section = nav.children[i];
+  if (section) section.classList.add(`nav-${c}`);
+});
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
   if (brandLink) {
