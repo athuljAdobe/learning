@@ -160,6 +160,24 @@ navBrand.className = 'nav-brand';
 
 if (navBar1Block) {
   navBrand.appendChild(navBar1Block);
+  /* convert search text to form */
+
+const searchContainer = navBrand.querySelector(
+  '.navigation-bar1.block > div > div:nth-child(3)'
+);
+
+if (searchContainer) {
+
+  const form = document.createElement('form');
+  form.className = 'nav-search';
+
+  form.innerHTML = `
+    <input type="search" placeholder="Search">
+  `;
+
+  searchContainer.innerHTML = '';
+  searchContainer.appendChild(form);
+}
 }
 
   /* ---------------- ASSEMBLE NAV ---------------- */
@@ -186,4 +204,19 @@ if (navBar1Block) {
   if (signBtn) createSigninModal(signBtn);
 
   decorateIcons(block);
+  /* =========================
+   STICKY NAV AFTER 40PX
+========================= */
+
+const navBar = document.querySelector('.navigation-bar1.block');
+
+window.addEventListener('scroll', () => {
+
+  if (window.scrollY > 40) {
+    navBar.classList.add('sticky');
+  } else {
+    navBar.classList.remove('sticky');
+  }
+
+});
 }

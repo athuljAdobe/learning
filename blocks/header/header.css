@@ -295,3 +295,36 @@ header .nav-search input {
   font-size: 14px;
   width: 160px;
 }
+/* =========================
+   SEARCH FORM
+========================= */
+
+header .nav-search input {
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  background: #eee;
+  font-size: 14px;
+  width: 180px;
+}
+
+header .nav-search input:focus {
+  outline: none;
+  border-color: #888;
+}
+
+/* default state */
+.navigation-bar1.block {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* sticky state after scroll */
+.navigation-bar1.block.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #f2f2f2;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
