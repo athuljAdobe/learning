@@ -3,19 +3,25 @@
 .surfing1 {
   position: relative;
   overflow: hidden;
-  width: 100%;
   margin-top: 100px;
 }
 
-/* slide */
+/* track */
 
-.surfing1 > div {
-  width: 100%;
+.surfing1-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* slides */
+
+.surfing1-slide {
+  min-width: 100%;
 }
 
 /* image */
 
-.surfing1 img {
+.surfing1-slide img {
   width: 100%;
   height: 520px;
   object-fit: cover;
@@ -23,7 +29,7 @@
 }
 
 /* ======================
-   ARROWS (BOTTOM RIGHT)
+   ARROWS
 ====================== */
 
 .surfing1-prev,
@@ -36,25 +42,18 @@
   height: 48px;
   font-size: 20px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-/* rightmost arrow */
 
 .surfing1-next {
   right: 25px;
 }
-
-/* spacing between arrows */
 
 .surfing1-prev {
   right: 85px;
 }
 
 /* ======================
-   DOTS
+   DOTS (CENTER)
 ====================== */
 
 .surfing1-dots {
@@ -75,16 +74,4 @@
 
 .surfing1-dot.active {
   background: #333;
-}
-
-/* ======================
-   RESPONSIVE
-====================== */
-
-@media (max-width: 900px) {
-
-  .surfing1 img {
-    height: 380px;
-  }
-
 }
