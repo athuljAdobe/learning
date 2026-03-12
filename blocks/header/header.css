@@ -355,3 +355,10 @@ header .nav-search input:focus {
 .lang-menu {
   display: none !important;
 }
+
+/* prevent header from creating second overlay */
+
+.signin-modal.active ~ header,
+body.modal-open header {
+  z-index: 1;
+}

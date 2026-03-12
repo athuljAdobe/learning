@@ -95,18 +95,24 @@ function createSigninModal(signBtn) {
   const closeBtn = modal.querySelector('.signin-close');
 
   signBtn.addEventListener('click', () => {
-    modal.classList.add('active');
-  });
+  modal.classList.add('active');
+  document.body.classList.add('modal-open');
+  document.body.style.overflow = 'hidden';
+});
 
-  closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+  document.body.classList.remove('modal-open');
+  document.body.style.overflow = '';
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
     modal.classList.remove('active');
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-    }
-  });
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+  }
+});
 }
 
 /* =========================

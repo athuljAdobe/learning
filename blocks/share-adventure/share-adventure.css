@@ -1,0 +1,51 @@
+/* container */
+
+.share-adventure {
+  max-width: 280px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* each item */
+
+.share-adventure > div {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+
+/* vertical grey line */
+
+.share-adventure > div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #ddd;
+}
+
+/* label (Activity, Adventure Type etc) */
+
+.share-adventure > div > div:first-child {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* value (Surfing, Overnight Trip etc) */
+
+.share-adventure > div > div:last-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* price styling */
+
+.share-adventure > div:last-child > div:last-child {
+  font-weight: 700;
+}

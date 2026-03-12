@@ -557,7 +557,7 @@ html, body {
 }
 
 #recent-articles::after,
-#next-adventures::after,#our-contributors::after,#wknd-guides::after,#current-adventures::after {
+#next-adventures::after,#our-contributors::after,#wknd-guides::after,#current-adventures::after,#bali-surf-camp::after {
   content: "";
   display: block;
   width: 150px;        /* length of underline */
@@ -599,3 +599,24 @@ html, body {
   bottom: 1700px;
 }
 
+/* make the section flex */
+
+.share-adventure-container.bali-desc-container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+/* left column */
+
+.share-adventure-wrapper {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+/* right column */
+
+.bali-desc-wrapper {
+  flex: 1;
+}
