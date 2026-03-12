@@ -89,6 +89,10 @@ header {
   height: var(--nav-height);
 }
 
+.footer{
+  background-color: black
+}
+
 header .header,
 footer .footer {
   visibility: hidden;
@@ -299,6 +303,7 @@ main img {
 /* sections */
 main > .section {
   margin: 40px 0;
+   padding:  0;
 }
 
 main > .section > div {
@@ -566,9 +571,7 @@ html, body {
   margin-top: 80px;
 }
 
-main .section {
-  padding:  0;
-}
+
 
 .hero-container {
   margin-bottom: 120px;
@@ -596,6 +599,3 @@ main .section {
   bottom: 1700px;
 }
 
-.footer{
-  background-color: black
-}

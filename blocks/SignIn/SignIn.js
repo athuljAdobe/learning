@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   /* ---------- LANGUAGE DROPDOWN ---------- */
 
   const lang = block.querySelector('div > div:nth-child(2)');
@@ -7,36 +6,35 @@ export default function decorate(block) {
   if (lang) {
     const button = document.createElement('button');
     button.textContent = lang.textContent;
-    button.className = "lang-btn";
+    button.className = 'lang-btn';
 
     const menu = document.createElement('ul');
-    menu.className = "lang-menu";
+    menu.className = 'lang-menu';
 
-    const languages = ["EN-US", "FR", "DE"];
+    const languages = ['EN-US', 'FR', 'DE'];
 
-    languages.forEach(l => {
-      const li = document.createElement("li");
+    languages.forEach((l) => {
+      const li = document.createElement('li');
       li.textContent = l;
       menu.appendChild(li);
     });
 
-    const wrapper = document.createElement("div");
-    wrapper.className = "lang-dropdown";
+    const wrapper = document.createElement('div');
+    wrapper.className = 'lang-dropdown';
 
     wrapper.appendChild(button);
     wrapper.appendChild(menu);
 
-    lang.innerHTML = "";
+    lang.innerHTML = '';
     lang.appendChild(wrapper);
 
-    button.addEventListener("click", () => {
-      menu.style.display =
-        menu.style.display === "block" ? "none" : "block";
+    button.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     });
 
-    document.addEventListener("click", (e) => {
+    document.addEventListener('click', (e) => {
       if (!wrapper.contains(e.target)) {
-        menu.style.display = "none";
+        menu.style.display = 'none';
       }
     });
   }
@@ -47,16 +45,15 @@ export default function decorate(block) {
   const signIn = row.children[0];
 
   if (signIn) {
-
-    const signBtn = document.createElement("button");
-    signBtn.className = "signin-btn";
+    const signBtn = document.createElement('button');
+    signBtn.className = 'signin-btn';
     signBtn.textContent = signIn.textContent;
 
-    signIn.innerHTML = "";
+    signIn.innerHTML = '';
     signIn.appendChild(signBtn);
 
-    const modal = document.createElement("div");
-    modal.className = "signin-modal";
+    const modal = document.createElement('div');
+    modal.className = 'signin-modal';
 
     modal.innerHTML = `
       <div class="signin-modal-content">
@@ -72,22 +69,20 @@ export default function decorate(block) {
 
     document.body.appendChild(modal);
 
-    const closeBtn = modal.querySelector(".signin-close");
+    const closeBtn = modal.querySelector('.signin-close');
 
-    signBtn.addEventListener("click", () => {
-      modal.style.display = "flex";
+    signBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
     });
 
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
     });
 
-    modal.addEventListener("click", (e) => {
+    modal.addEventListener('click', (e) => {
       if (e.target === modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
       }
     });
-
   }
-
 }

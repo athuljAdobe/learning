@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   const rows = [...block.children];
 
   const tabsWrapper = document.createElement('div');
@@ -9,7 +8,6 @@ export default function decorate(block) {
   contentWrapper.className = 'adventure-tab-content';
 
   rows.forEach((row, index) => {
-
     const tabName = row.children[0].textContent.trim();
 
     /* CREATE TAB BUTTON */
@@ -29,7 +27,6 @@ export default function decorate(block) {
     if (index === 0) cardsWrapper.classList.add('active');
 
     [...row.children].slice(1).forEach((cell) => {
-
       const card = document.createElement('div');
       card.className = 'adventure-card';
 
@@ -43,19 +40,13 @@ export default function decorate(block) {
     /* TAB CLICK */
 
     button.addEventListener('click', () => {
+      tabsWrapper.querySelectorAll('button').forEach((btn) => btn.classList.remove('active'));
 
-      tabsWrapper.querySelectorAll('button').forEach(btn =>
-        btn.classList.remove('active')
-      );
-
-      contentWrapper.querySelectorAll('.adventure-row').forEach(r =>
-        r.classList.remove('active')
-      );
+      contentWrapper.querySelectorAll('.adventure-row').forEach((r) => r.classList.remove('active'));
 
       button.classList.add('active');
       cardsWrapper.classList.add('active');
     });
-
   });
 
   block.innerHTML = '';

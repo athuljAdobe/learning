@@ -26,6 +26,8 @@
 .share-story > div p {
   margin: 0;
   line-height: 1.5;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 /* Title */
@@ -36,10 +38,7 @@
 }
 
 /* First line (title) */
-.share-story > div p {
-  font-weight: 600;
-  text-transform: uppercase;
-}
+
 
 /* Date */
 .share-story > div p br + * {

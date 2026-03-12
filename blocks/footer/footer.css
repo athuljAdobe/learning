@@ -23,7 +23,25 @@ footer .columns > div {
 }
  
 /* ================= */
+
+/* Footer text */
+
+/* ================= */
+ 
+footer .default-content-wrapper {
+  max-width: 1400px;
+}
+ 
+footer .default-content-wrapper p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+ 
+/* ================= */
+
 /* Logo column */
+
 /* ================= */
  
 footer .columns-img-col {
@@ -37,7 +55,9 @@ footer .columns-img-col img {
 }
  
 /* ================= */
+
 /* Navigation column */
+
 /* ================= */
  
 footer .columns > div > div:nth-child(2) {
@@ -61,7 +81,9 @@ footer .columns > div > div:nth-child(2) p:hover {
 }
  
 /* ================= */
+
 /* Follow Us column */
+
 /* ================= */
  
 footer .columns > div > div:nth-child(3) {
@@ -102,30 +124,18 @@ footer .icon svg {
   height: 100%;
 }
  
-/* ================= */
-/* Footer text */
-/* ================= */
- 
-footer .default-content-wrapper {
-  max-width: 1400px;
-}
- 
-footer .default-content-wrapper p {
-  font-size: 11.6px;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
- 
 /* Links */
 footer a {
   color: #5ea0ff;
 }
  
 /* ================= */
+
 /* Large tablet */
+
 /* ================= */
  
-@media (max-width: 1200px) {
+@media (width <= 1200px) {
   footer .footer > div {
     padding: 28px 32px;
   }
@@ -145,10 +155,12 @@ footer a {
 }
  
 /* ================= */
+
 /* Tablet */
+
 /* ================= */
  
-@media (max-width: 900px) {
+@media (width <= 900px) {
   footer .footer > div {
     padding: 24px 24px 32px;
   }
@@ -162,6 +174,8 @@ footer a {
   footer .columns-img-col {
     width: 120px;
   }
+
+   
  
   footer .columns > div > div:nth-child(2) {
     margin-top: 0;
@@ -178,16 +192,16 @@ footer a {
     width: 100%;
   }
  
-  footer .default-content-wrapper p {
-    font-size: 15px;
-  }
+  
 }
  
 /* ================= */
+
 /* Mobile */
+
 /* ================= */
  
-@media (max-width: 600px) {
+@media (width <= 600px) {
   footer .footer > div {
     padding: 20px 16px 28px;
   }
@@ -223,8 +237,5 @@ footer a {
     height: 20px;
   }
  
-  footer .default-content-wrapper p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
+ 
 }

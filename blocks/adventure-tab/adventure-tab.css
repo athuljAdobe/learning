@@ -8,7 +8,9 @@
 
 
 /* ----------------------------- */
+
 /* TABS */
+
 /* ----------------------------- */
 
 .adventure-tab-tabs {
@@ -42,7 +44,9 @@
 
 
 /* ----------------------------- */
+
 /* CARD GRID */
+
 /* ----------------------------- */
 
 .adventure-tab-content {
@@ -61,7 +65,9 @@
 
 
 /* ----------------------------- */
+
 /* CARD */
+
 /* ----------------------------- */
 
 .adventure-card {
@@ -112,27 +118,26 @@
 
 
 /* ----------------------------- */
+
 /* RESPONSIVE */
+
 /* ----------------------------- */
 
-@media (max-width: 1100px) {
-
+@media (width <= 1100px) {
   .adventure-row {
     grid-template-columns: repeat(3, 1fr);
   }
 
 }
 
-@media (max-width: 800px) {
-
+@media (width <= 800px) {
   .adventure-row {
     grid-template-columns: repeat(2, 1fr);
   }
 
 }
 
-@media (max-width: 500px) {
-
+@media (width <= 500px) {
   .adventure-row {
     grid-template-columns: 1fr;
   }

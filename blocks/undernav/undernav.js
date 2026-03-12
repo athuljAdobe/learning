@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   const rows = [...block.children];
 
   const logo = rows[0].textContent.trim();

@@ -1,9 +1,7 @@
 export default function decorate(block) {
-
   const rows = [...block.children];
 
   rows.forEach((row) => {
-
     const p = row.querySelector('p');
 
     const parts = p.innerHTML.split('<br>');
@@ -17,7 +15,5 @@ export default function decorate(block) {
         <span class="story-date">${date}</span>
       </div>
     `;
-
   });
-
 }
