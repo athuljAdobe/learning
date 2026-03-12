@@ -1,6 +1,10 @@
 /* ================================================
-   NAV WRAPPER — stacks signin + navbar vertically
+   NAV WRAPPER — override styles.css height
    ================================================ */
+
+header {
+  height: auto !important; /* override styles.css height: var(--nav-height) */
+}
 
 header .nav-wrapper {
   width: 100%;
@@ -20,6 +24,7 @@ header nav {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: auto !important;
   font-family: var(--body-font-family);
 }
 
@@ -44,7 +49,6 @@ header nav .nav-signin {
   justify-content: flex-end;
 }
 
-/* Make the signin block itself full width inside */
 header nav .nav-signin .signin-wrapper,
 header nav .nav-signin .signin.block {
   width: 100%;
@@ -62,7 +66,7 @@ header nav .nav-signin .signin.black-bar > div {
   gap: 20px;
   padding: 8px 32px;
   max-width: 100%;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* ================================================
@@ -73,14 +77,13 @@ header nav .nav-brand {
   width: 100%;
   background-color: #f2f2f2;
   border-bottom: 1px solid #ddd;
+  height: auto !important;
 }
 
-/* Inner flex row: logo | nav links | search */
 header nav .nav-brand > div,
-header nav .nav-brand > picture,
 header nav .nav-brand .navigation-bar1-wrapper,
 header nav .nav-brand .navigation-bar1.block > div {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   align-items: center;
   gap: 32px;
@@ -96,7 +99,7 @@ header nav .nav-brand img {
   display: block;
 }
 
-/* Nav links (p tags inside second cell) */
+/* Nav links — second cell */
 header nav .nav-brand .navigation-bar1.block > div > div:nth-child(2) {
   display: flex;
   flex-direction: row;
@@ -121,7 +124,7 @@ header nav .nav-brand .navigation-bar1.block > div > div:nth-child(2) p:hover {
   text-decoration: underline;
 }
 
-/* Search cell */
+/* Search cell — third cell */
 header nav .nav-brand .navigation-bar1.block > div > div:nth-child(3) {
   margin-left: auto;
   display: flex;
@@ -140,7 +143,7 @@ header nav .nav-brand .navigation-bar1.block > div > div:nth-child(3) p {
 }
 
 /* ================================================
-   NAV SECTIONS + TOOLS (hidden — handled by nav-brand)
+   NAV SECTIONS + TOOLS (hidden — inside nav-brand)
    ================================================ */
 
 header nav .nav-sections,
@@ -166,6 +169,7 @@ header nav .nav-hamburger {
     background: #f2f2f2;
     width: 100%;
     box-sizing: border-box;
+    visibility: visible;
   }
 
   header nav .nav-hamburger button {
@@ -196,15 +200,10 @@ header nav .nav-hamburger {
     background: #222;
   }
 
-  header nav .nav-hamburger-icon::before {
-    top: -6px;
-  }
+  header nav .nav-hamburger-icon::before { top: -6px; }
+  header nav .nav-hamburger-icon::after  { top: 6px; }
 
-  header nav .nav-hamburger-icon::after {
-    top: 6px;
-  }
-
-  /* Mobile: stack nav links vertically when expanded */
+  /* Mobile expanded: stack nav links vertically */
   header nav[aria-expanded='true'] .nav-brand .navigation-bar1.block > div {
     flex-direction: column;
     align-items: flex-start;
@@ -228,5 +227,5 @@ header nav .nav-hamburger {
    ================================================ */
 
 body {
-  padding-top: 80px; /* adjust if signin bar height changes */
+  padding-top: 90px;
 }

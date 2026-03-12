@@ -1,6 +1,6 @@
-import { decorateIcons } from '../../scripts/aem.js';
-import { getMetadata } from '../../scripts/aem.js';
+import { decorateIcons, getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import decorateSignin from '../SignIn/SignIn.js';// ← FIXED PATH
 
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
@@ -36,7 +36,7 @@ function closeOnFocusLost(e) {
 
 function openOnKeydown(e) {
   const focused = document.activeElement;
-  const isNavDrop = focused.className === 'nav-drop';
+  const isNavDrop = focused.classList.contains('nav-drop');
   if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
     const dropExpanded = focused.getAttribute('aria-expanded') === 'true';
     toggleAllNavSections(focused.closest('.nav-sections'));
@@ -63,6 +63,15 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   if (button) button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
 
+  if (navSections && isDesktop.matches) {
+    navSections.querySelectorAll('.nav-drop').forEach((drop) => {
+      if (!drop.hasAttribute('tabindex')) {
+        drop.setAttribute('tabindex', 0);
+        drop.addEventListener('focus', focusNavSection);
+      }
+    });
+  }
+
   if (!expanded || isDesktop.matches) {
     window.addEventListener('keydown', closeOnEscape);
     nav.addEventListener('focusout', closeOnFocusLost);
@@ -72,23 +81,18 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-/**
- * Builds nav sections (links) from the navigation-bar1 block content
- */
 function buildNavSections(navBar1Block) {
   const rows = navBar1Block.querySelectorAll(':scope > div > div');
   if (!rows || rows.length < 2) return null;
 
-  // second cell contains nav links (MAGAZINE, ADVENTURES, etc.)
   const linksCell = rows[1];
   const ul = document.createElement('ul');
 
   linksCell.querySelectorAll('p').forEach((p) => {
-    const li = document.createElement('li');
     const text = p.textContent.trim();
     if (!text) return;
 
-    // Convert to anchor if not already
+    const li = document.createElement('li');
     const existing = p.querySelector('a');
     if (existing) {
       li.appendChild(existing.cloneNode(true));
@@ -107,22 +111,13 @@ function buildNavSections(navBar1Block) {
   return wrapper;
 }
 
-/**
- * Builds brand/logo from navigation-bar1 block
- */
 function buildBrand(navBar1Block) {
-  const firstCell = navBar1Block.querySelector(':scope > div > div:first-child');
-  if (!firstCell) return null;
-  return firstCell;
+  return navBar1Block.querySelector(':scope > div > div:first-child') || null;
 }
 
-/**
- * Builds search from navigation-bar1 block
- */
 function buildSearch(navBar1Block) {
   const rows = navBar1Block.querySelectorAll(':scope > div > div');
-  if (!rows || rows.length < 3) return null;
-  return rows[2]; // third cell = search
+  return rows.length >= 3 ? rows[2] : null;
 }
 
 export default async function decorate(block) {
@@ -130,25 +125,33 @@ export default async function decorate(block) {
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
 
+  // Load signin CSS manually since block lives inside a fragment
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '/blocks/signin/signin.css';
+  document.head.appendChild(link);
+
+  // Find and decorate signin block before moving it into nav
+  const signinBlock = fragment.querySelector('.signin.block');
+  if (signinBlock) {
+    decorateSignin(signinBlock);
+  }
+
+  // Find navigation-bar1 block
+  const navBar1Block = fragment.querySelector('.navigation-bar1.block, .navigation-bar1');
+
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
 
-  // ── Find signin block ──────────────────────────────────────
-  const signinSection = fragment.querySelector('.signin-container, [data-section-status]');
-  const signinBlock = fragment.querySelector('.signin.block, .signin');
-
-  // ── Find navigation-bar1 block ────────────────────────────
-  const navBar1Block = fragment.querySelector('.navigation-bar1.block, .navigation-bar1');
-
-  // ── Build hamburger ───────────────────────────────────────
+  // Build hamburger
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
     <span class="nav-hamburger-icon"></span>
   </button>`;
 
-  // ── Build signin bar (above nav) ──────────────────────────
+  // Build signin bar (full width top row)
   let signinBar = null;
   if (signinBlock) {
     signinBar = document.createElement('div');
@@ -156,7 +159,7 @@ export default async function decorate(block) {
     signinBar.appendChild(signinBlock.closest('.signin-wrapper') || signinBlock);
   }
 
-  // ── Build brand ───────────────────────────────────────────
+  // Build brand (logo)
   const navBrand = document.createElement('div');
   navBrand.className = 'nav-brand';
   if (navBar1Block) {
@@ -164,15 +167,13 @@ export default async function decorate(block) {
     if (brandContent) navBrand.appendChild(brandContent);
   }
 
-  // ── Build nav sections ────────────────────────────────────
+  // Build nav sections (links)
   const navSections = document.createElement('div');
   navSections.className = 'nav-sections';
   if (navBar1Block) {
     const sectionsContent = buildNavSections(navBar1Block);
     if (sectionsContent) {
       navSections.appendChild(sectionsContent);
-
-      // Add nav-drop + click for dropdowns
       navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
         if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
         navSection.addEventListener('click', () => {
@@ -186,7 +187,7 @@ export default async function decorate(block) {
     }
   }
 
-  // ── Build tools (search) ──────────────────────────────────
+  // Build tools (search)
   const navTools = document.createElement('div');
   navTools.className = 'nav-tools';
   if (navBar1Block) {
@@ -194,7 +195,7 @@ export default async function decorate(block) {
     if (searchContent) navTools.appendChild(searchContent);
   }
 
-  // ── Assemble nav ──────────────────────────────────────────
+  // Assemble: hamburger | signin bar | brand | sections | tools
   nav.prepend(hamburger);
   if (signinBar) nav.appendChild(signinBar);
   nav.appendChild(navBrand);
@@ -204,7 +205,6 @@ export default async function decorate(block) {
   nav.setAttribute('aria-expanded', 'false');
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
-
   hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
 
   const navWrapper = document.createElement('div');
