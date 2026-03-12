@@ -401,9 +401,7 @@ header nav {
 }
 
 /* sign-in bar full width */
-.signin-container {
-  width: 100%;
-}
+
 
 html, body {
   overflow-x: hidden;
