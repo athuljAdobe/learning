@@ -287,3 +287,11 @@ body {
   font-size: 22px;
   cursor: pointer;
 }
+
+header .nav-search input {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: #eee;
+  font-size: 14px;
+  width: 160px;
+}
