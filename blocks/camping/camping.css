@@ -60,3 +60,53 @@
   text-decoration: none;
   color: black;
 }
+
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+
+  /* stack layout */
+
+  .camping {
+    grid-template-columns: 1fr;
+    margin: 40px 20px;
+  }
+
+  /* image */
+
+  .camping-image img {
+    margin-top: 0;
+    height: 300px;
+  }
+
+  /* content */
+
+  .camping-content {
+    padding: 30px 20px;
+  }
+
+  /* label */
+
+  .camping-label {
+    font-size: 18px;
+  }
+
+  /* title */
+
+  .camping-content h2 {
+    font-size: 28px;
+  }
+
+  /* description */
+
+  .camping-content p {
+    font-size: 16px;
+  }
+
+  /* button */
+
+  .camping-content a {
+    padding: 12px 24px;
+  }
+}

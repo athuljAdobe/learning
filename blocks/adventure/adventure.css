@@ -17,8 +17,6 @@
 
 /* white box */
 
-/* white box */
-
 .adventure-content {
   position: absolute;
   bottom: 0;
@@ -55,4 +53,49 @@
   font-weight: bold;
   text-decoration: none;
   color: black;
+}
+
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+
+  .adventure {
+    margin: 40px 20px;
+  }
+
+  /* image smaller */
+
+  .adventure-image img {
+    height: 300px;
+  }
+
+  /* remove overlay layout */
+
+  .adventure-content {
+    position: static;
+    height: auto;
+    left: auto;
+    right: auto;
+    padding: 25px 20px;
+  }
+
+  /* title */
+
+  .adventure-content h2 {
+    font-size: 26px;
+  }
+
+  /* description */
+
+  .adventure-content p {
+    font-size: 16px;
+  }
+
+  /* button */
+
+  .adventure-content a {
+    padding: 12px 22px;
+  }
+
 }
