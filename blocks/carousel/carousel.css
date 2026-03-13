@@ -126,6 +126,9 @@
   background: #333;
 }
 
+
+
+
 /* -------------------- */
 
 /* RESPONSIVE */
@@ -137,6 +140,7 @@
     height: 380px;
   }
 
+ 
   .carousel-slide > div:nth-child(2),
   .carousel-slide > div:nth-child(3),
   .carousel-slide > div:nth-child(4) {
