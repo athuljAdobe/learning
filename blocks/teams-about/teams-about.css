@@ -1,12 +1,16 @@
+/* container */
+
 .teams-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   text-align: center;
   margin-top: 40px;
+  padding: 0 20px;
 }
 
 /* Image */
+
 .team-image img {
   width: 160px;
   height: 160px;
@@ -15,6 +19,7 @@
 }
 
 /* Name */
+
 .team-card h3 {
   margin-top: 20px;
   font-size: 20px;
@@ -22,6 +27,7 @@
 }
 
 /* Profession */
+
 .team-role {
   font-size: 12px;
   text-transform: uppercase;
@@ -31,6 +37,7 @@
 }
 
 /* Social bar */
+
 .team-social {
   margin-top: 20px;
   background: #222;
@@ -41,6 +48,7 @@
 }
 
 /* Icons */
+
 .team-social a {
   color: white;
   font-size: 16px;
@@ -48,4 +56,46 @@
 
 .team-social a:hover {
   color: #f4b400;
+}
+
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width: 1000px) {
+
+  .teams-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+  .teams-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .team-image img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .team-card h3 {
+    font-size: 18px;
+  }
+
+  .team-role {
+    font-size: 11px;
+  }
+
+  .team-social {
+    gap: 16px;
+    padding: 10px;
+  }
+
 }
