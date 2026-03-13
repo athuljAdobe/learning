@@ -1,16 +1,20 @@
 /* Accordion container */
+
 .accordion.down-arrow.block {
   max-width: 900px;
   margin: 40px auto;
+  padding: 0 20px;
   font-family: Arial, sans-serif;
 }
 
 /* Each accordion item */
+
 .accordion.down-arrow.block > div {
   border-bottom: 1px solid #e3e3e3;
 }
 
 /* Title */
+
 .accordion-title {
   padding: 18px 20px;
   font-size: 16px;
@@ -21,6 +25,7 @@
 }
 
 /* + icon */
+
 .accordion-title::after {
   content: "+";
   position: absolute;
@@ -32,11 +37,13 @@
 }
 
 /* change + to - when open */
+
 .accordion.down-arrow.block > div.active .accordion-title::after {
   content: "-";
 }
 
 /* Content */
+
 .accordion-content {
   display: none;
   padding: 0 20px 20px;
@@ -45,16 +52,57 @@
 }
 
 /* Show when active */
+
 .accordion.down-arrow.block > div.active .accordion-content {
   display: block;
 }
 
 /* Hover */
+
 .accordion-title:hover {
   background: #f5f5f5;
 }
 
-.accordion-wrapper{
+/* wrapper */
+
+.accordion-wrapper {
   position: relative;
   right: 100px;
+}
+
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width: 1000px) {
+
+  .accordion-wrapper {
+    right: 40px;
+  }
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+  .accordion-wrapper {
+    position: static;
+  }
+
+  .accordion-title {
+    font-size: 15px;
+    padding: 16px 18px;
+  }
+
+  .accordion-title::after {
+    right: 15px;
+    font-size: 18px;
+  }
+
+  .accordion-content {
+    padding: 0 18px 18px;
+    font-size: 14px;
+  }
+
 }

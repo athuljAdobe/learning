@@ -492,6 +492,7 @@ html, body {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
+/* FAQ underline */
 
 #faqs::after {
   content: '';
@@ -504,6 +505,7 @@ html, body {
 }
 
 
+/* container */
 
 .card-faq-container.need-help-container {
   display: flex;
@@ -513,11 +515,13 @@ html, body {
 }
 
 /* left content */
+
 .card-faq-wrapper {
   flex: 2;
 }
 
 /* right help box */
+
 .need-help-wrapper {
   flex: 1;
   max-width: 320px;
@@ -526,6 +530,44 @@ html, body {
   bottom: 300px;
 }
 
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width: 1000px) {
+
+  .card-faq-container.need-help-container {
+    gap: 40px;
+  }
+
+  .need-help-wrapper {
+    bottom: 150px;
+    padding-top: 80px;
+  }
+
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+
+  .card-faq-container.need-help-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card-faq-wrapper {
+    width: 100%;
+  }
+
+  .need-help-wrapper {
+    position: static;
+    max-width: 100%;
+    padding-top: 20px;
+    bottom: auto;
+  }
+
+}
 
 @media (width <= 900px) {
   .card-faq-container.need-help-container {
