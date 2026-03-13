@@ -786,5 +786,16 @@ li {
   #faqs{
     margin-top: 100px;
   }
-  
+}
+
+/* Mobile spacing for Magazine heading */
+@media (max-width: 600px) {
+  #magazine {
+    margin-bottom: 80px;
+    padding-top: 50px;
+  }
+  #adventures {
+    margin-top: 80px;
+    padding-top: 70px;
+  }
 }
