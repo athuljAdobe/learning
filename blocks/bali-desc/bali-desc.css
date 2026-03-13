@@ -4,6 +4,7 @@
   max-width: 1000px;
   margin: 40px auto;
   font-family: Arial, sans-serif;
+  padding: 0 20px;
 }
 
 /* tabs */
@@ -12,6 +13,7 @@
   display: flex;
   gap: 10px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 /* tab button */
@@ -55,4 +57,54 @@
 .bali-desc p {
   line-height: 1.6;
   margin-bottom: 16px;
+}
+
+
+/* ======================
+   TABLET
+====================== */
+
+@media (max-width: 900px) {
+
+  .bali-desc {
+    margin: 30px auto;
+  }
+
+  .bali-desc .tab-btn {
+    padding: 9px 16px;
+    font-size: 11px;
+  }
+
+}
+
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width: 600px) {
+
+  .bali-desc {
+    margin: 25px auto;
+    padding: 0 16px;
+  }
+
+  .bali-desc .tabs {
+    gap: 8px;
+  }
+
+  .bali-desc .tab-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .bali-desc img {
+    margin: 16px 0;
+  }
+
+  .bali-desc p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
 }

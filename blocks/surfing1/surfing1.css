@@ -75,3 +75,76 @@
 .surfing1-dot.active {
   background: #333;
 }
+
+/* ======================
+   TABLET
+====================== */
+
+@media (max-width: 900px) {
+
+  .surfing1 {
+    margin-top: 60px;
+  }
+
+  .surfing1-slide img {
+    height: 420px;
+  }
+
+  .surfing1-prev,
+  .surfing1-next {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .surfing1-prev {
+    right: 75px;
+  }
+
+  .surfing1-next {
+    right: 20px;
+  }
+
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width: 600px) {
+
+  .surfing1 {
+    margin-top: 40px;
+  }
+
+  .surfing1-slide img {
+    height: 260px;
+  }
+
+  .surfing1-prev,
+  .surfing1-next {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    bottom: 18px;
+  }
+
+  .surfing1-prev {
+    right: 65px;
+  }
+
+  .surfing1-next {
+    right: 15px;
+  }
+
+  .surfing1-dots {
+    bottom: 20px;
+  }
+
+  .surfing1-dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+
+}

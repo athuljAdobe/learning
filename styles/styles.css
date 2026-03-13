@@ -714,3 +714,68 @@ html {
     padding: 0 16px;
   }
 }
+
+/* =============================== */
+/* Accessibility Improvements */
+/* =============================== */
+
+/* 1️⃣ Visible focus for keyboard users */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #ffd400;
+  outline-offset: 2px;
+}
+
+/* 2️⃣ Improve link accessibility */
+a:any-link {
+  text-decoration-thickness: 1.5px;
+}
+
+/* 3️⃣ Improve contrast for placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+/* 4️⃣ Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5️⃣ Improve button accessibility */
+button {
+  min-height: 44px;
+}
+
+/* 6️⃣ Improve clickable area for links */
+a {
+  min-height: 24px;
+}
+
+/* 7️⃣ Ensure hover also works for keyboard focus */
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+/* 8️⃣ Improve contrast for small text */
+.small-text,
+p,
+li {
+  color: #212529;
+}
+
+/* 9️⃣ Ensure icons are accessible */
+.icon {
+  vertical-align: middle;
+}
+
+/* 🔟 Improve scrollbar accessibility */
+::-webkit-scrollbar-thumb {
+  border: 2px solid #f1f1f1;
+}
