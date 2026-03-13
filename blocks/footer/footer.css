@@ -226,3 +226,24 @@ footer a {
     height: 20px;
   }
 }
+
+/* force footer text to white */
+
+footer,
+footer p,
+footer span,
+footer div {
+  color: #fff;
+}
+
+/* make footer links white */
+
+footer a {
+  color: #fff;
+}
+
+/* keep hover visible */
+
+footer a:hover {
+  color: #ffd400;
+}
