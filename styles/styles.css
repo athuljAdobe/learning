@@ -779,3 +779,12 @@ li {
 ::-webkit-scrollbar-thumb {
   border: 2px solid #f1f1f1;
 }
+
+
+@media (width < 900px) {
+
+  #faqs{
+    margin-top: 100px;
+  }
+  
+}
