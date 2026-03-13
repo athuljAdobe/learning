@@ -557,7 +557,7 @@ html, body {
 }
 
 #recent-articles::after,
-#next-adventures::after,#our-contributors::after,#wknd-guides::after,#current-adventures::after,#bali-surf-camp::after {
+#next-adventures::after,#our-contributors::after,#wknd-guides::after,#current-adventures::after,#bali-surf-camp::after,#downhill-skiing-wyoming::after,#whistler-mountain-climbing::after,#downhill-skiing-wyoming::after {
   content: "";
   display: block;
   width: 150px;        /* length of underline */
