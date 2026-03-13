@@ -362,3 +362,19 @@ header .nav-search input:focus {
 body.modal-open header {
   z-index: 1;
 }
+
+@media (width < 900px) {
+
+  .navigation-bar1.block.sticky {
+    top: 0;
+    padding-bottom: 45px;
+  }
+
+  /* hide signin bar only when nav becomes sticky */
+
+  .navigation-bar1.block.sticky ~ .nav-signin,
+  body.scrolled header nav .nav-signin {
+    display: none;
+  }
+
+}
