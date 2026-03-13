@@ -663,3 +663,29 @@ html, body {
   flex: 1;
 }
 
+/* Chrome, Edge, Safari */
+
+::-webkit-scrollbar {
+  width: 10px; /* keep same size */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffd400; /* yellow scrollbar */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6c200; /* darker yellow on hover */
+}
+
+
+/* Firefox */
+
+html {
+  scrollbar-color: #ffd400 #f1f1f1;
+  scrollbar-width: thin;
+}
