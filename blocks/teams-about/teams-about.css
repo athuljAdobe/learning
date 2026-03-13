@@ -74,6 +74,11 @@
 /* ---------------- MOBILE ---------------- */
 
 @media (max-width: 600px) {
+  #about-us {
+    font-size: 28px;
+    position: relative;
+    top: 50px;
+  }
 
   .teams-container {
     grid-template-columns: 1fr;
