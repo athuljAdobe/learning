@@ -23,9 +23,7 @@ footer .columns > div {
 }
  
 /* ================= */
-
 /* Footer text */
-
 /* ================= */
  
 footer .default-content-wrapper {
@@ -39,9 +37,7 @@ footer .default-content-wrapper p {
 }
  
 /* ================= */
-
 /* Logo column */
-
 /* ================= */
  
 footer .columns-img-col {
@@ -55,9 +51,7 @@ footer .columns-img-col img {
 }
  
 /* ================= */
-
 /* Navigation column */
-
 /* ================= */
  
 footer .columns > div > div:nth-child(2) {
@@ -73,17 +67,22 @@ footer .columns > div > div:nth-child(2) p {
   text-transform: uppercase;
   margin: 0;
   white-space: nowrap;
+  color: #fff; /* make text white */
 }
  
-footer .columns > div > div:nth-child(2) p:hover {
+footer .columns > div > div:nth-child(2) a {
+  color: #fff; /* make links white */
+  text-decoration: none;
+}
+ 
+footer .columns > div > div:nth-child(2) p:hover,
+footer .columns > div > div:nth-child(2) a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
  
 /* ================= */
-
 /* Follow Us column */
-
 /* ================= */
  
 footer .columns > div > div:nth-child(3) {
@@ -130,9 +129,7 @@ footer a {
 }
  
 /* ================= */
-
 /* Large tablet */
-
 /* ================= */
  
 @media (width <= 1200px) {
@@ -155,9 +152,7 @@ footer a {
 }
  
 /* ================= */
-
 /* Tablet */
-
 /* ================= */
  
 @media (width <= 900px) {
@@ -174,8 +169,6 @@ footer a {
   footer .columns-img-col {
     width: 120px;
   }
-
-   
  
   footer .columns > div > div:nth-child(2) {
     margin-top: 0;
@@ -191,14 +184,10 @@ footer a {
     padding-right: 0;
     width: 100%;
   }
- 
-  
 }
  
 /* ================= */
-
 /* Mobile */
-
 /* ================= */
  
 @media (width <= 600px) {
@@ -236,6 +225,4 @@ footer a {
     width: 20px;
     height: 20px;
   }
- 
- 
 }
