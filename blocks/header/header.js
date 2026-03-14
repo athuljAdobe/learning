@@ -102,7 +102,7 @@ export default async function decorate(block) {
   hamburger.className = 'nav-hamburger';
 
   hamburger.innerHTML = `
-    <button type="button" aria-controls="nav">
+    <button type="button" aria-controls="nav"  aria-label="Open navigation menu">
       <span class="nav-hamburger-icon"></span>
     </button>
   `;
