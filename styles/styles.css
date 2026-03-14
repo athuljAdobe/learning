@@ -799,3 +799,15 @@ li {
     padding-top: 70px;
   }
 }
+
+.card-faq picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1280 / 853;
+}
+
+.card-faq picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
