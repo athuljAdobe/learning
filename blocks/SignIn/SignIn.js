@@ -60,12 +60,14 @@ export default function decorate(block) {
   modal.innerHTML = `
     <div class="signin-modal-content">
       <span class="signin-close">&times;</span>
-      <h2>Sign In</h2>
-      <p>Welcome Back</p>
+      <h2 style="text-decoration: underline; text-decoration-color: #ffd400;">Sign In</h2>
+      <p style="color: #fff;">Welcome Back</p>
       <input type="text" placeholder="USERNAME">
       <input type="password" placeholder="PASSWORD">
-      <p class="forgot">FORGOT YOUR PASSWORD?</p>
-      <button class="signin-submit">SIGN IN</button>
+      <p style="color: #fff;" class="forgot">FORGOT YOUR PASSWORD?</p>
+      <a href="https://main--learning--athuljadobe.aem.page/landing">
+        <button class="signin-submit">SIGN IN</button>
+      </a>
     </div>
   `;
 

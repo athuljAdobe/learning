@@ -91,7 +91,7 @@ function createSigninModal(signBtn) {
         <input type="text" placeholder="USERNAME">
         <input type="password" placeholder="PASSWORD">
         <p>FORGOT YOUR PASSWORD?</p>
-        <a href="https://main--learning--athuljadobe.aem.page/landing">
+        <a href="https://main--learning--athuljadobe.aem.page/landing>
           <button class="signin-submit">SIGN IN</button>
         </a>
       </div>
