@@ -378,3 +378,7 @@ body.modal-open header {
   }
 
 }
+
+.signin-welcome {
+  color: white;
+}
