@@ -75,44 +75,52 @@ function buildSearch() {
 
 function createSigninModal(signBtn) {
 
-  const modal = document.createElement('div');
-  modal.className = 'signin-modal';
+  let modal = document.querySelector('.signin-modal');
 
-  modal.innerHTML = `
-    <div class="signin-modal-content">
-      <span class="signin-close">&times;</span>
-      <h2 style="text-decoration: underline; text-decoration-color: #ffd400;">Sign In</h2>
-      <p style="color: #fff;">Welcome Back</p>
-      <input type="text" placeholder="USERNAME">
-      <input type="password" placeholder="PASSWORD">
-      <p>FORGOT YOUR PASSWORD?</p>
-      <a href="https://main--learning--athuljadobe.aem.page/landing"><button class="signin-submit">SIGN IN</button></a>
-    </div>
-  `;
+  // Prevent duplicate modal creation
+  if (!modal) {
 
-  document.body.appendChild(modal);
+    modal = document.createElement('div');
+    modal.className = 'signin-modal';
+
+    modal.innerHTML = `
+      <div class="signin-modal-content">
+        <span class="signin-close">&times;</span>
+        <h2 style="text-decoration: underline; text-decoration-color: #ffd400;">Sign In</h2>
+        <p style="color: #fff;">Welcome Back</p>
+        <input type="text" placeholder="USERNAME">
+        <input type="password" placeholder="PASSWORD">
+        <p>FORGOT YOUR PASSWORD?</p>
+        <a href="https://main--learning--athuljadobe.aem.page/landing">
+          <button class="signin-submit">SIGN IN</button>
+        </a>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+  }
 
   const closeBtn = modal.querySelector('.signin-close');
 
   signBtn.addEventListener('click', () => {
-  modal.classList.add('active');
-  document.body.classList.add('modal-open');
-  document.body.style.overflow = 'hidden';
-});
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
+  });
 
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-  document.body.classList.remove('modal-open');
-  document.body.style.overflow = '';
-});
-
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
+  closeBtn.addEventListener('click', () => {
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
-  }
-});
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
+    }
+  });
 }
 
 /* =========================
