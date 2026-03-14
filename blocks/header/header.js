@@ -73,55 +73,7 @@ function buildSearch() {
    SIGNIN MODAL
 ========================= */
 
-function createSigninModal(signBtn) {
 
-  let modal = document.querySelector('.signin-modal');
-
-  // Prevent duplicate modal creation
-  if (!modal) {
-
-    modal = document.createElement('div');
-    modal.className = 'signin-modal';
-
-    modal.innerHTML = `
-      <div class="signin-modal-content">
-        <span class="signin-close">&times;</span>
-        <h2 style="text-decoration: underline; text-decoration-color: #ffd400;">Sign In</h2>
-        <p >Welcome Back</p>
-        <input type="text" placeholder="USERNAME">
-        <input type="password" placeholder="PASSWORD">
-        <p>FORGOT YOUR PASSWORD?</p>
-        <a href="https://main--learning--athuljadobe.aem.page/landing>
-          <button class="signin-submit">SIGN IN</button>
-        </a>
-      </div>
-    `;
-
-    document.body.appendChild(modal);
-  }
-
-  const closeBtn = modal.querySelector('.signin-close');
-
-  signBtn.addEventListener('click', () => {
-    modal.classList.add('active');
-    document.body.classList.add('modal-open');
-    document.body.style.overflow = 'hidden';
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-    document.body.classList.remove('modal-open');
-    document.body.style.overflow = '';
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-      document.body.classList.remove('modal-open');
-      document.body.style.overflow = '';
-    }
-  });
-}
 
 /* =========================
    MAIN HEADER DECORATOR
@@ -213,9 +165,7 @@ if (searchContainer) {
 
   /* ---------------- SIGNIN MODAL ---------------- */
 
-  const signBtn = nav.querySelector('.signin-btn');
-
-  if (signBtn) createSigninModal(signBtn);
+ 
 
   decorateIcons(block);
   /* =========================
