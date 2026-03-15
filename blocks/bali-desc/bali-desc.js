@@ -6,11 +6,12 @@ export default function decorate(block) {
   tabs.className = 'tabs';
 
   const panels = document.createElement('div');
+  panels.className = 'tab-panels';
 
   rows.forEach((row, i) => {
 
     const tabTitle = row.children[0].textContent.trim();
-    const content = row.children[1];
+    const content = row.children[1].cloneNode(true);
 
     const button = document.createElement('button');
     button.className = 'tab-btn';
@@ -27,10 +28,10 @@ export default function decorate(block) {
 
     button.addEventListener('click', () => {
 
-      block.querySelectorAll('.tab-btn')
+      tabs.querySelectorAll('.tab-btn')
         .forEach(btn => btn.classList.remove('active'));
 
-      block.querySelectorAll('.tab-panel')
+      panels.querySelectorAll('.tab-panel')
         .forEach(p => p.classList.remove('active'));
 
       button.classList.add('active');
@@ -45,4 +46,5 @@ export default function decorate(block) {
 
   block.innerHTML = '';
   block.append(tabs, panels);
+
 }

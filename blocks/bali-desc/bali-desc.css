@@ -5,9 +5,10 @@
   margin: 40px auto;
   font-family: Arial, sans-serif;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* tabs */
+/* tabs wrapper */
 
 .bali-desc .tabs {
   display: flex;
@@ -16,7 +17,7 @@
   flex-wrap: wrap;
 }
 
-/* tab button */
+/* tab buttons */
 
 .bali-desc .tab-btn {
   padding: 10px 18px;
@@ -26,6 +27,7 @@
   background: #eee;
   cursor: pointer;
   letter-spacing: .05em;
+  transition: all .2s ease;
 }
 
 /* active tab */
@@ -33,6 +35,12 @@
 .bali-desc .tab-btn.active {
   background: #333;
   color: white;
+}
+
+/* panels container */
+
+.bali-desc .tab-panels {
+  width: 100%;
 }
 
 /* panels */
@@ -45,11 +53,13 @@
   display: block;
 }
 
-/* image */
+/* images */
 
 .bali-desc img {
   width: 100%;
+  height: auto;
   margin: 20px 0;
+  display: block;
 }
 
 /* paragraphs */
@@ -57,8 +67,8 @@
 .bali-desc p {
   line-height: 1.6;
   margin-bottom: 16px;
+  font-size: 16px;
 }
-
 
 /* ======================
    TABLET
@@ -68,15 +78,15 @@
 
   .bali-desc {
     margin: 30px auto;
+    padding: 0 18px;
   }
 
   .bali-desc .tab-btn {
     padding: 9px 16px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
 }
-
 
 /* ======================
    MOBILE
@@ -89,13 +99,18 @@
     padding: 0 16px;
   }
 
+  /* horizontal scroll tabs */
+
   .bali-desc .tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
     gap: 8px;
   }
 
   .bali-desc .tab-btn {
-    padding: 8px 12px;
+    padding: 8px 14px;
     font-size: 11px;
+    white-space: nowrap;
   }
 
   .bali-desc img {
@@ -105,6 +120,19 @@
   .bali-desc p {
     font-size: 14px;
     line-height: 1.5;
+  }
+
+}
+
+/* ======================
+   SMALL MOBILE
+====================== */
+
+@media (max-width: 420px) {
+
+  .bali-desc .tab-btn {
+    font-size: 11px;
+    padding: 8px 12px;
   }
 
 }

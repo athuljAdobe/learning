@@ -1,8 +1,9 @@
 .share-story {
   max-width: 320px;
+  width: 100%;
 }
 
-/* Title (if you add SHARE THIS STORY heading) */
+/* Title */
 .share-story::before {
   content: "SHARE THIS STORY";
   display: block;
@@ -37,9 +38,6 @@
   text-transform: uppercase;
 }
 
-/* First line (title) */
-
-
 /* Date */
 .share-story > div p br + * {
   font-size: 12px;
@@ -51,4 +49,50 @@
 .share-story > div:hover {
   background: #f4d400;
   border-left: 4px solid #000;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+
+  .share-story {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .share-story > div {
+    padding: 16px 18px;
+    margin-bottom: 20px;
+  }
+
+  .share-story > div p {
+    font-size: 14px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  .share-story {
+    max-width: 100%;
+  }
+
+  .share-story::before {
+    font-size: 11px;
+    margin-bottom: 16px;
+  }
+
+  .share-story > div {
+    padding: 14px 16px;
+    margin-bottom: 16px;
+  }
+
+  .share-story > div p {
+    font-size: 13px;
+  }
+
+  .share-story > div p br + * {
+    font-size: 11px;
+  }
 }
